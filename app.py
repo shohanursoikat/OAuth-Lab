@@ -35,7 +35,7 @@ def callback():
 @app.route("/exchange", methods=["POST"])
 def exchange():
     if not request.is_json:
-    return jsonify({"error": "JSON required"}), 400
+        return jsonify({"error": "JSON required"}), 400
 
 code = request.json.get("code")
 
